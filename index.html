@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gửi Việt xa nhớ</title>
+    <meta name="language" content="zh-CN">
+    <meta name="title" content="小孙同学">
+    <meta name="github" content="https://github.com/sun0225SUN/Awesome-Love-Code">
+    <meta name="describe" content="收集不易，您的star是我坚持的动力，同时也欢迎各位PR哦! ">
+    <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/sun0225SUN/photos/img/20210715233345.png">
+    <link rel="stylesheet" href="css/love.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <audio id="audios" preload="auto">
+        <source src="MP3/1.mp3" />
+    </audio>
+
+    <div class="container" onselectstart="return false;" unselectable="on" style="-moz-user-select:none;">
+        <div class="body_left">
+            <img src="images/biubiubiu.gif" alt="" ondragstart='return false;'>
+            <div class="play-icon" id="playIcon">
+                <img src="images/music-icon.png" alt="Play Music">
+            </div>
+        </div>
+
+        <div class="body_center love">
+            <div class="block">
+                <div class="div1"></div>
+                <div class="div2"></div>
+                <div class="div3"></div>
+                <div class="div4"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="border">
+            <div class="border-top"></div>
+            <div class="border-bottom"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/love.js"></script>
+    <script type="text/javascript">
+        const audio = document.getElementById('audios');
+        const playIcon = document.getElementById('playIcon');
+
+        // Set initial display to none
+        playIcon.style.display = 'none';
+
+        // Show playIcon after 5 seconds
+        setTimeout(() => {
+            playIcon.style.display = 'block';
+        }, 7500);
+
+        playIcon.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
+    </script>
+</body>
+
+</html>
